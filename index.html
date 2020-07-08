@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <?php 
+   $v = date("Ymdhis");
+?>
+<head>
+   <meta charset="UTF-8">
+   <title>something</title>
+   <script src="./jquery/jquery.js"></script>
+   <script src="./jquery/jquery-ui.js?v=<?php echo $v;?>"></script>
+   <link type="text/css" rel="stylesheet" href="./jquery/jquery-ui.css?v=<?php echo $v;?>">
+   <link type="text/css" rel="stylesheet" href="./css/index.css?v=<?php echo $v;?>">
+</head>
+
+<body>
+
+   <!-- 검색 -->
+   <div class="search" id="search">
+      <span class="search-icon" id="searchIcon"></span>
+      <input class="search-input" id="searchInput" type="text">
+      <span class="search-web-icon" id="searchWebIcon">
+         <div class="arrow_box" id="arrowBox">
+            <ul></ul>
+         </div>
+      </span>
+   </div> 
+
+   <!-- 메모 -->
+   <div class="note" id="noteInput">
+      <div class="note-nav" id="noteNav">
+         <img src="images/maximize.svg" class="maximize" id="maximize">
+         <img src="images/minimize.svg" class="minimize" id="minimize">
+         <span id="close">Ⅹ</span>
+      </div>
+      <textarea id="noteContent" placeholder="메모를 작성하세요"></textarea>
+   </div>
+
+   <!-- 달려 -->
+   <div class="calendar" id="calendarSection">
+      <div class="calendar-nav">
+         <img src="images/maximize.svg" class="calendar-maximize" id="calendarMaximize">
+         <img src="images/minimize.svg" class="calendar-minimize" id="calendarMinimize">
+         <span id="calendarClose">Ⅹ</span>
+      </div>
+      <div class="calendar-content" id="calendarContent"></div>
+   </div>
+
+   <!-- 시계 -->
+   <label class="date-print" id="datePrint"></label>
+   <div class="js-clock no-drag">
+      <h1>00:00</h1>
+   </div>
+
+   <!-- 사용자이름 -->
+   <form class="js-form form">
+      <input type="text" class="name-input" placeholder="what is your name?">
+   </form>
+   <h2 class="js-greetings greeting"></h2>
+
+   <!-- to do list -->
+   <form class="js-todoForm">
+      <input type="text" class="todo-input" placeholder="Write a to do" maxlength="20">
+   </form>
+   <div class="to-do-list-section">
+      <ul class="js-toDoList"></ul>
+   </div>
+
+   <!-- 날씨 -->
+   <span class="js-weather"></span>
+   <span class="weather-icon"></span>
+
+   <!-- 아이콘박스 -->
+   <div class="icon-box-mouseover">
+      MouseOver Here!
+   <div class="icon-box">
+      <ul>
+         <li class="imageList-icon" id="imageChange">
+            <div class="image-list" id="imageList">
+               <ul></ul>
+            </div>
+         </li>
+         <li class="weatherCheck-icon" id="weatherCheck"></li>
+         <li class="browser-icon" id="browser">
+            <div class="browser-list" id="browserList">
+               <ul></ul>
+            </div>
+         </li>
+         <li class="paint-icon" id="paint"></li>
+         <li class="note-icon" id="note"></li>
+         <li class="calendar-icon" id="calendar"></li>
+         <li class="color-icon" id="color"></li>
+         <li class="reset-icon" id="reset"></li>
+      </ul>
+   </div>
+</div>
+
+   <!-- js -->
+   <script src="./script/bg.js?v=<?php echo $v;?>"></script>
+   <script src="./script/calendar.js?v=<?php echo $v;?>"></script>
+   <script src="./script/note.js?v=<?php echo $v;?>"></script>
+   <script src="./script/iconList.js?v=<?php echo $v;?>"></script>
+   <script src="./script/clock.js?v=<?php echo $v;?>"></script>
+   <script src="./script/userName.js?v=<?php echo $v;?>"></script>
+   <script src="./script/todo.js?v=<?php echo $v;?>"></script>
+   <script src="./script/weather.js?v=<?php echo $v;?>"></script>
+   <script src="./script/bgImageList.js?v=<?php echo $v;?>"></script>
+   <script src="./script/reset.js?v=<?php echo $v;?>"></script>
+   <script src="./script/broswer.js?v=<?php echo $v;?>"></script>
+   <script src="./script/colorChange.js?v=<?php echo $v;?>"></script>
+   <script src="./script/datePrint.js?v=<?php echo $v;?>"></script>
+   <script src="./script/googleSearch.js?v=<?php echo $v;?>"></script>
+</body>
+
+</html>

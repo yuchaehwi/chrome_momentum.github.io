@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>paint</title>
+   <script type="text/javascript" src="./ExplorerCanvas/excanvas.js"></script>
+   <link rel="stylesheet" type="text/css" href="./css/styles.css?v=1">
+</head>
+
+<body>
+   <!-- 캔버스 -->
+   <canvas class="canvas" id="jsCanvas">
+   </canvas>
+
+   <div class="controls">
+      <!-- 붓 사이즈 조절 -->
+      <div class="controls_range">
+         <input type="range" id="jsRange" min="0.1" max="10.0" value="5.0" step="0.1">
+      </div>
+      <!-- 기능 -->
+      <div class="controls_btns">
+         <input id="jsImage" type="file" accept="image/*" title="">
+         <button>Image</button>
+         <button id="jsReset">Reset</button>
+         <button id="jsMode">Fill</button>
+         <button id="jsSave">Save</button>
+      </div>
+   </div>
+   <!-- 색상변경 -->
+   <div class="controls_colors" id="jsColors">
+      <div class="controls_color jsColor" style="background-color : #2c2c2c"></div>
+      <div class="controls_color jsColor" style="background-color : white"></div>
+      <div class="controls_color jsColor" style="background-color : #FF3B30"></div>
+      <div class="controls_color jsColor" style="background-color : #FF9500"></div>
+      <div class="controls_color jsColor" style="background-color : #FFCC00"></div>
+      <div class="controls_color jsColor" style="background-color : #4CD963"></div>
+      <div class="controls_color jsColor" style="background-color : #5Ac8FA"></div>
+      <div class="controls_color jsColor" style="background-color : #0579FF"></div>
+      <div class="controls_color jsColor" style="background-color : #5856D6"></div>
+      <input type="button" class="controls_color jsColor form-control jscolor" id="colorPicker" name="state" value="" readonly>
+   </div>
+
+   <script src="./script/app.js?v=1"></script>
+   <script src="./script/jscolor.js?v=1"></script>
+
+</body>
+
+</html>
+
+<!-- 초기화, 색상선택, 이미지불러오기 -->
